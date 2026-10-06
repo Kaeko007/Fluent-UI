@@ -1,24 +1,26 @@
 import os
-import re
 
 SRC_DIR = r"C:\Users\devtu\Desktop\Fluent-master\src"
 OUTPUT_FILE = r"C:\Users\devtu\Desktop\Fluent-master\main.lua"
 
-def get_tree_structure(src_dir):
-    modules = {} # rel_path_without_ext -> code
-    for root, dirs, files in os.walk(src_dir):
-        for f in files:
-            if f.endswith(".lua") and not f.endswith(".spec.lua"):
-                full_path = os.path.join(root, f)
-                rel_path = os.path.relpath(full_path, src_dir).replace("\\", "/")
-                with open(full_path, "r", encoding="utf-8") as file:
-                    content = file.read()
-                modules[rel_path] = content
-    return modules
+modules = {}
+dirs_set = set()
 
-modules = get_tree_structure(SRC_DIR)
+for root, dirs, files in os.walk(SRC_DIR):
+    for f in files:
+        if f.endswith(".lua") and not f.endswith(".spec.lua"):
+            full_path = os.path.join(root, f)
+            rel_path = os.path.relpath(full_path, SRC_DIR).replace("\\", "/")
+            with open(full_path, "r", encoding="utf-8") as file:
+                content = file.read()
+            modules[rel_path] = content
 
-# Generate Lua Virtual File System Code
+            dir_parts = rel_path.split("/")[:-1]
+            cur = ""
+            for p in dir_parts:
+                cur = f"{cur}/{p}" if cur else p
+                dirs_set.add(cur)
+
 lua_code = []
 lua_code.append("""--[[
     Fluent Interface Suite (Standalone Bundle)
@@ -84,49 +86,55 @@ end
 local Root = MakeVirtualInstance("ModuleScript", "Fluent", nil)
 """)
 
-# Order files so parents exist before children
-paths = sorted(modules.keys(), key=lambda p: (p.count("/"), p))
-
-# Create Virtual Nodes
-nodes = {} # rel_path -> node_var_name
+nodes = {}
+nodes[""] = "Root"
 nodes["init.lua"] = "Root"
 
+var_map = {} # string -> unique var
 var_counter = 1
-for rel in paths:
-    if rel == "init.lua":
-        continue
-    parts = rel.split("/")
-    var_name = f"node_{var_counter}"
+
+def get_unique_var(prefix):
+    global var_counter
+    v = f"{prefix}_{var_counter}"
     var_counter += 1
-    nodes[rel] = var_name
+    return v
+
+# Create directory nodes first
+sorted_dirs = sorted(list(dirs_set), key=lambda d: (d.count("/"), d))
+for d in sorted_dirs:
+    parts = d.split("/")
+    folder_name = parts[-1]
+    parent_dir = "/".join(parts[:-1]) if len(parts) > 1 else ""
+    parent_var = nodes[parent_dir]
     
-    # Determine parent and node name
-    if len(parts) == 1:
-        # direct child of Root
-        parent_var = "Root"
-        node_name = parts[0].replace(".lua", "")
+    init_path = f"{d}/init.lua"
+    if init_path in modules:
+        var_name = get_unique_var(f"mod_{folder_name}")
+        nodes[d] = var_name
+        nodes[init_path] = var_name
+        lua_code.append(f'local {var_name} = MakeVirtualInstance("ModuleScript", "{folder_name}", {parent_var})')
     else:
-        # nested
-        filename = parts[-1]
-        if filename == "init.lua":
-            # Parent is parent of parent dir
-            parent_dir = "/".join(parts[:-2])
-            parent_var = nodes.get(parent_dir + "/init.lua", "Root") if parent_dir else "Root"
-            node_name = parts[-2]
-        else:
-            parent_dir = "/".join(parts[:-1])
-            parent_var = nodes.get(parent_dir + "/init.lua", nodes.get(parent_dir, "Root"))
-            node_name = filename.replace(".lua", "")
-            
-    lua_code.append(f'local {var_name} = MakeVirtualInstance("ModuleScript", "{node_name}", {parent_var})')
+        var_name = get_unique_var(f"dir_{folder_name}")
+        nodes[d] = var_name
+        lua_code.append(f'local {var_name} = MakeVirtualInstance("Folder", "{folder_name}", {parent_var})')
+
+# Create file nodes
+for rel_path in sorted(list(modules.keys()), key=lambda p: (p.count("/"), p)):
+    if rel_path == "init.lua" or rel_path in nodes:
+        continue
+    parts = rel_path.split("/")
+    file_name = parts[-1].replace(".lua", "")
+    parent_dir = "/".join(parts[:-1]) if len(parts) > 1 else ""
+    parent_var = nodes[parent_dir]
+    
+    var_name = get_unique_var(f"file_{file_name}")
+    nodes[rel_path] = var_name
+    lua_code.append(f'local {var_name} = MakeVirtualInstance("ModuleScript", "{file_name}", {parent_var})')
 
 lua_code.append("\n-- Module Implementation Bindings")
 
-for rel in paths:
-    var_name = nodes[rel]
-    code = modules[rel]
-    
-    # We set environment for closure or pass require
+for rel_path, code in modules.items():
+    var_name = nodes[rel_path]
     lua_code.append(f"ModuleFunctions[{var_name}] = function()")
     lua_code.append(f"    local script = {var_name}")
     lua_code.append("    local require = customRequire")
@@ -142,4 +150,4 @@ bundle_content = "\n".join(lua_code)
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write(bundle_content)
 
-print(f"Bundle created successfully at {OUTPUT_FILE} ({len(bundle_content)} bytes)")
+print(f"Fixed bundle created at {OUTPUT_FILE} ({len(bundle_content)} bytes)")

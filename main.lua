@@ -61,52 +61,54 @@ end
 
 local Root = MakeVirtualInstance("ModuleScript", "Fluent", nil)
 
-local node_1 = MakeVirtualInstance("ModuleScript", "Creator", Root)
-local node_2 = MakeVirtualInstance("ModuleScript", "Icons", Root)
-local node_3 = MakeVirtualInstance("ModuleScript", "AcrylicBlur", Root)
-local node_4 = MakeVirtualInstance("ModuleScript", "AcrylicPaint", Root)
-local node_5 = MakeVirtualInstance("ModuleScript", "CreateAcrylic", Root)
-local node_6 = MakeVirtualInstance("ModuleScript", "Utils", Root)
-local node_7 = MakeVirtualInstance("ModuleScript", "Acrylic", Root)
-local node_8 = MakeVirtualInstance("ModuleScript", "Assets", Root)
-local node_9 = MakeVirtualInstance("ModuleScript", "Button", Root)
-local node_10 = MakeVirtualInstance("ModuleScript", "Dialog", Root)
-local node_11 = MakeVirtualInstance("ModuleScript", "Element", Root)
-local node_12 = MakeVirtualInstance("ModuleScript", "Notification", Root)
-local node_13 = MakeVirtualInstance("ModuleScript", "Section", Root)
-local node_14 = MakeVirtualInstance("ModuleScript", "Tab", Root)
-local node_15 = MakeVirtualInstance("ModuleScript", "Textbox", Root)
-local node_16 = MakeVirtualInstance("ModuleScript", "TitleBar", Root)
-local node_17 = MakeVirtualInstance("ModuleScript", "Window", Root)
-local node_18 = MakeVirtualInstance("ModuleScript", "Button", Root)
-local node_19 = MakeVirtualInstance("ModuleScript", "Colorpicker", Root)
-local node_20 = MakeVirtualInstance("ModuleScript", "Dropdown", Root)
-local node_21 = MakeVirtualInstance("ModuleScript", "Input", Root)
-local node_22 = MakeVirtualInstance("ModuleScript", "Keybind", Root)
-local node_23 = MakeVirtualInstance("ModuleScript", "Paragraph", Root)
-local node_24 = MakeVirtualInstance("ModuleScript", "Slider", Root)
-local node_25 = MakeVirtualInstance("ModuleScript", "Toggle", Root)
-local node_26 = MakeVirtualInstance("ModuleScript", "Elements", Root)
-local node_27 = MakeVirtualInstance("ModuleScript", "Amethyst", Root)
-local node_28 = MakeVirtualInstance("ModuleScript", "Aqua", Root)
-local node_29 = MakeVirtualInstance("ModuleScript", "Dark", Root)
-local node_30 = MakeVirtualInstance("ModuleScript", "Darker", Root)
-local node_31 = MakeVirtualInstance("ModuleScript", "Light", Root)
-local node_32 = MakeVirtualInstance("ModuleScript", "Rose", Root)
-local node_33 = MakeVirtualInstance("ModuleScript", "Themes", Root)
-local node_34 = MakeVirtualInstance("ModuleScript", "BaseMotor", Root)
-local node_35 = MakeVirtualInstance("ModuleScript", "GroupMotor", Root)
-local node_36 = MakeVirtualInstance("ModuleScript", "Instant", Root)
-local node_37 = MakeVirtualInstance("ModuleScript", "Linear", Root)
-local node_38 = MakeVirtualInstance("ModuleScript", "Signal", Root)
-local node_39 = MakeVirtualInstance("ModuleScript", "SingleMotor", Root)
-local node_40 = MakeVirtualInstance("ModuleScript", "Spring", Root)
-local node_41 = MakeVirtualInstance("ModuleScript", "Flipper", Root)
-local node_42 = MakeVirtualInstance("ModuleScript", "isMotor", node_41)
+local mod_Acrylic_1 = MakeVirtualInstance("ModuleScript", "Acrylic", Root)
+local dir_Components_2 = MakeVirtualInstance("Folder", "Components", Root)
+local mod_Elements_3 = MakeVirtualInstance("ModuleScript", "Elements", Root)
+local dir_Packages_4 = MakeVirtualInstance("Folder", "Packages", Root)
+local mod_Themes_5 = MakeVirtualInstance("ModuleScript", "Themes", Root)
+local mod_Flipper_6 = MakeVirtualInstance("ModuleScript", "Flipper", dir_Packages_4)
+local file_Creator_7 = MakeVirtualInstance("ModuleScript", "Creator", Root)
+local file_Icons_8 = MakeVirtualInstance("ModuleScript", "Icons", Root)
+local file_AcrylicBlur_9 = MakeVirtualInstance("ModuleScript", "AcrylicBlur", mod_Acrylic_1)
+local file_AcrylicPaint_10 = MakeVirtualInstance("ModuleScript", "AcrylicPaint", mod_Acrylic_1)
+local file_CreateAcrylic_11 = MakeVirtualInstance("ModuleScript", "CreateAcrylic", mod_Acrylic_1)
+local file_Utils_12 = MakeVirtualInstance("ModuleScript", "Utils", mod_Acrylic_1)
+local file_Assets_13 = MakeVirtualInstance("ModuleScript", "Assets", dir_Components_2)
+local file_Button_14 = MakeVirtualInstance("ModuleScript", "Button", dir_Components_2)
+local file_Dialog_15 = MakeVirtualInstance("ModuleScript", "Dialog", dir_Components_2)
+local file_Element_16 = MakeVirtualInstance("ModuleScript", "Element", dir_Components_2)
+local file_Notification_17 = MakeVirtualInstance("ModuleScript", "Notification", dir_Components_2)
+local file_Section_18 = MakeVirtualInstance("ModuleScript", "Section", dir_Components_2)
+local file_Tab_19 = MakeVirtualInstance("ModuleScript", "Tab", dir_Components_2)
+local file_Textbox_20 = MakeVirtualInstance("ModuleScript", "Textbox", dir_Components_2)
+local file_TitleBar_21 = MakeVirtualInstance("ModuleScript", "TitleBar", dir_Components_2)
+local file_Window_22 = MakeVirtualInstance("ModuleScript", "Window", dir_Components_2)
+local file_Button_23 = MakeVirtualInstance("ModuleScript", "Button", mod_Elements_3)
+local file_Colorpicker_24 = MakeVirtualInstance("ModuleScript", "Colorpicker", mod_Elements_3)
+local file_Dropdown_25 = MakeVirtualInstance("ModuleScript", "Dropdown", mod_Elements_3)
+local file_Input_26 = MakeVirtualInstance("ModuleScript", "Input", mod_Elements_3)
+local file_Keybind_27 = MakeVirtualInstance("ModuleScript", "Keybind", mod_Elements_3)
+local file_Paragraph_28 = MakeVirtualInstance("ModuleScript", "Paragraph", mod_Elements_3)
+local file_Slider_29 = MakeVirtualInstance("ModuleScript", "Slider", mod_Elements_3)
+local file_Toggle_30 = MakeVirtualInstance("ModuleScript", "Toggle", mod_Elements_3)
+local file_Amethyst_31 = MakeVirtualInstance("ModuleScript", "Amethyst", mod_Themes_5)
+local file_Aqua_32 = MakeVirtualInstance("ModuleScript", "Aqua", mod_Themes_5)
+local file_Dark_33 = MakeVirtualInstance("ModuleScript", "Dark", mod_Themes_5)
+local file_Darker_34 = MakeVirtualInstance("ModuleScript", "Darker", mod_Themes_5)
+local file_Light_35 = MakeVirtualInstance("ModuleScript", "Light", mod_Themes_5)
+local file_Rose_36 = MakeVirtualInstance("ModuleScript", "Rose", mod_Themes_5)
+local file_BaseMotor_37 = MakeVirtualInstance("ModuleScript", "BaseMotor", mod_Flipper_6)
+local file_GroupMotor_38 = MakeVirtualInstance("ModuleScript", "GroupMotor", mod_Flipper_6)
+local file_Instant_39 = MakeVirtualInstance("ModuleScript", "Instant", mod_Flipper_6)
+local file_Linear_40 = MakeVirtualInstance("ModuleScript", "Linear", mod_Flipper_6)
+local file_Signal_41 = MakeVirtualInstance("ModuleScript", "Signal", mod_Flipper_6)
+local file_SingleMotor_42 = MakeVirtualInstance("ModuleScript", "SingleMotor", mod_Flipper_6)
+local file_Spring_43 = MakeVirtualInstance("ModuleScript", "Spring", mod_Flipper_6)
+local file_isMotor_44 = MakeVirtualInstance("ModuleScript", "isMotor", mod_Flipper_6)
 
 -- Module Implementation Bindings
-ModuleFunctions[node_1] = function()
-    local script = node_1
+ModuleFunctions[file_Creator_7] = function()
+    local script = file_Creator_7
     local require = customRequire
 local Root = script.Parent
 local Themes = require(Root.Themes)
@@ -376,8 +378,8 @@ return Creator
 
 end
 
-ModuleFunctions[node_2] = function()
-    local script = node_2
+ModuleFunctions[file_Icons_8] = function()
+    local script = file_Icons_8
     local require = customRequire
 -- This file was @generated by Tarmac. It is not intended for manual editing.
 return {
@@ -1400,8 +1402,8 @@ return Library
 
 end
 
-ModuleFunctions[node_3] = function()
-    local script = node_3
+ModuleFunctions[file_AcrylicBlur_9] = function()
+    local script = file_AcrylicBlur_9
     local require = customRequire
 local Creator = require(script.Parent.Parent.Creator)
 local createAcrylic = require(script.Parent.CreateAcrylic)
@@ -1523,8 +1525,8 @@ end
 
 end
 
-ModuleFunctions[node_4] = function()
-    local script = node_4
+ModuleFunctions[file_AcrylicPaint_10] = function()
+    local script = file_AcrylicPaint_10
     local require = customRequire
 local Creator = require(script.Parent.Parent.Creator)
 local AcrylicBlur = require(script.Parent.AcrylicBlur)
@@ -1648,8 +1650,8 @@ end
 
 end
 
-ModuleFunctions[node_5] = function()
-    local script = node_5
+ModuleFunctions[file_CreateAcrylic_11] = function()
+    local script = file_CreateAcrylic_11
     local require = customRequire
 local Root = script.Parent.Parent
 local Creator = require(Root.Creator)
@@ -1679,29 +1681,8 @@ return createAcrylic
 
 end
 
-ModuleFunctions[node_6] = function()
-    local script = node_6
-    local require = customRequire
-local function map(value, inMin, inMax, outMin, outMax)
-	return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
-end
-
-local function viewportPointToWorld(location, distance)
-	local unitRay = game:GetService("Workspace").CurrentCamera:ScreenPointToRay(location.X, location.Y)
-	return unitRay.Origin + unitRay.Direction * distance
-end
-
-local function getOffset()
-	local viewportSizeY = game:GetService("Workspace").CurrentCamera.ViewportSize.Y
-	return map(viewportSizeY, 0, 2560, 8, 56)
-end
-
-return { viewportPointToWorld, getOffset }
-
-end
-
-ModuleFunctions[node_7] = function()
-    local script = node_7
+ModuleFunctions[mod_Acrylic_1] = function()
+    local script = mod_Acrylic_1
     local require = customRequire
 local Acrylic = {
 	AcrylicBlur = require(script.AcrylicBlur),
@@ -1757,8 +1738,29 @@ return Acrylic
 
 end
 
-ModuleFunctions[node_8] = function()
-    local script = node_8
+ModuleFunctions[file_Utils_12] = function()
+    local script = file_Utils_12
+    local require = customRequire
+local function map(value, inMin, inMax, outMin, outMax)
+	return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
+end
+
+local function viewportPointToWorld(location, distance)
+	local unitRay = game:GetService("Workspace").CurrentCamera:ScreenPointToRay(location.X, location.Y)
+	return unitRay.Origin + unitRay.Direction * distance
+end
+
+local function getOffset()
+	local viewportSizeY = game:GetService("Workspace").CurrentCamera.ViewportSize.Y
+	return map(viewportSizeY, 0, 2560, 8, 56)
+end
+
+return { viewportPointToWorld, getOffset }
+
+end
+
+ModuleFunctions[file_Assets_13] = function()
+    local script = file_Assets_13
     local require = customRequire
 return {
 	Close = "rbxassetid://9886659671",
@@ -1769,8 +1771,8 @@ return {
 
 end
 
-ModuleFunctions[node_9] = function()
-    local script = node_9
+ModuleFunctions[file_Button_14] = function()
+    local script = file_Button_14
     local require = customRequire
 local Root = script.Parent.Parent
 local Flipper = require(Root.Packages.Flipper)
@@ -1851,8 +1853,8 @@ end
 
 end
 
-ModuleFunctions[node_10] = function()
-    local script = node_10
+ModuleFunctions[file_Dialog_15] = function()
+    local script = file_Dialog_15
     local require = customRequire
 local UserInputService = game:GetService("UserInputService")
 local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
@@ -2024,8 +2026,8 @@ return Dialog
 
 end
 
-ModuleFunctions[node_11] = function()
-    local script = node_11
+ModuleFunctions[file_Element_16] = function()
+    local script = file_Element_16
     local require = customRequire
 local Root = script.Parent.Parent
 local Flipper = require(Root.Packages.Flipper)
@@ -2185,8 +2187,8 @@ end
 
 end
 
-ModuleFunctions[node_12] = function()
-    local script = node_12
+ModuleFunctions[file_Notification_17] = function()
+    local script = file_Notification_17
     local require = customRequire
 local Root = script.Parent.Parent
 local Flipper = require(Root.Packages.Flipper)
@@ -2412,8 +2414,8 @@ return Notification
 
 end
 
-ModuleFunctions[node_13] = function()
-    local script = node_13
+ModuleFunctions[file_Section_18] = function()
+    local script = file_Section_18
     local require = customRequire
 local Root = script.Parent.Parent
 local Creator = require(Root.Creator)
@@ -2467,8 +2469,8 @@ end
 
 end
 
-ModuleFunctions[node_14] = function()
-    local script = node_14
+ModuleFunctions[file_Tab_19] = function()
+    local script = file_Tab_19
     local require = customRequire
 local Root = script.Parent.Parent
 local Flipper = require(Root.Packages.Flipper)
@@ -2666,8 +2668,8 @@ return TabModule
 
 end
 
-ModuleFunctions[node_15] = function()
-    local script = node_15
+ModuleFunctions[file_Textbox_20] = function()
+    local script = file_Textbox_20
     local require = customRequire
 local TextService = game:GetService("TextService")
 local Root = script.Parent.Parent
@@ -2792,8 +2794,8 @@ end
 
 end
 
-ModuleFunctions[node_16] = function()
-    local script = node_16
+ModuleFunctions[file_TitleBar_21] = function()
+    local script = file_TitleBar_21
     local require = customRequire
 local Root = script.Parent.Parent
 local Assets = require(script.Parent.Assets)
@@ -2953,8 +2955,8 @@ end
 
 end
 
-ModuleFunctions[node_17] = function()
-    local script = node_17
+ModuleFunctions[file_Window_22] = function()
+    local script = file_Window_22
     local require = customRequire
 -- i will rewrite this someday
 local UserInputService = game:GetService("UserInputService")
@@ -3355,8 +3357,8 @@ end
 
 end
 
-ModuleFunctions[node_18] = function()
-    local script = node_18
+ModuleFunctions[file_Button_23] = function()
+    local script = file_Button_23
     local require = customRequire
 local Root = script.Parent.Parent
 local Creator = require(Root.Creator)
@@ -3397,8 +3399,8 @@ return Element
 
 end
 
-ModuleFunctions[node_19] = function()
-    local script = node_19
+ModuleFunctions[file_Colorpicker_24] = function()
+    local script = file_Colorpicker_24
     local require = customRequire
 local UserInputService = game:GetService("UserInputService")
 local TouchInputService = game:GetService("TouchInputService")
@@ -3914,8 +3916,8 @@ return Element
 
 end
 
-ModuleFunctions[node_20] = function()
-    local script = node_20
+ModuleFunctions[file_Dropdown_25] = function()
+    local script = file_Dropdown_25
     local require = customRequire
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
@@ -4416,8 +4418,21 @@ return Element
 
 end
 
-ModuleFunctions[node_21] = function()
-    local script = node_21
+ModuleFunctions[mod_Elements_3] = function()
+    local script = mod_Elements_3
+    local require = customRequire
+local Elements = {}
+
+for _, Theme in next, script:GetChildren() do
+	table.insert(Elements, require(Theme))
+end
+
+return Elements
+
+end
+
+ModuleFunctions[file_Input_26] = function()
+    local script = file_Input_26
     local require = customRequire
 local Root = script.Parent.Parent
 local Creator = require(Root.Creator)
@@ -4506,8 +4521,8 @@ return Element
 
 end
 
-ModuleFunctions[node_22] = function()
-    local script = node_22
+ModuleFunctions[file_Keybind_27] = function()
+    local script = file_Keybind_27
     local require = customRequire
 local UserInputService = game:GetService("UserInputService")
 
@@ -4717,8 +4732,8 @@ return Element
 
 end
 
-ModuleFunctions[node_23] = function()
-    local script = node_23
+ModuleFunctions[file_Paragraph_28] = function()
+    local script = file_Paragraph_28
     local require = customRequire
 local Root = script.Parent.Parent
 local Components = Root.Components
@@ -4744,8 +4759,8 @@ return Paragraph
 
 end
 
-ModuleFunctions[node_24] = function()
-    local script = node_24
+ModuleFunctions[file_Slider_29] = function()
+    local script = file_Slider_29
     local require = customRequire
 local UserInputService = game:GetService("UserInputService")
 local Root = script.Parent.Parent
@@ -4911,8 +4926,8 @@ return Element
 
 end
 
-ModuleFunctions[node_25] = function()
-    local script = node_25
+ModuleFunctions[file_Toggle_30] = function()
+    local script = file_Toggle_30
     local require = customRequire
 local TweenService = game:GetService("TweenService")
 local Root = script.Parent.Parent
@@ -5022,345 +5037,8 @@ return Element
 
 end
 
-ModuleFunctions[node_26] = function()
-    local script = node_26
-    local require = customRequire
-local Elements = {}
-
-for _, Theme in next, script:GetChildren() do
-	table.insert(Elements, require(Theme))
-end
-
-return Elements
-
-end
-
-ModuleFunctions[node_27] = function()
-    local script = node_27
-    local require = customRequire
-return {
-	Name = "Amethyst",
-	Accent = Color3.fromRGB(97, 62, 167),
-
-	AcrylicMain = Color3.fromRGB(20, 20, 20),
-	AcrylicBorder = Color3.fromRGB(110, 90, 130),
-	AcrylicGradient = ColorSequence.new(Color3.fromRGB(85, 57, 139), Color3.fromRGB(40, 25, 65)),
-	AcrylicNoise = 0.92,
-
-	TitleBarLine = Color3.fromRGB(95, 75, 110),
-	Tab = Color3.fromRGB(160, 140, 180),
-
-	Element = Color3.fromRGB(140, 120, 160),
-	ElementBorder = Color3.fromRGB(60, 50, 70),
-	InElementBorder = Color3.fromRGB(100, 90, 110),
-	ElementTransparency = 0.87,
-
-	ToggleSlider = Color3.fromRGB(140, 120, 160),
-	ToggleToggled = Color3.fromRGB(0, 0, 0),
-
-	SliderRail = Color3.fromRGB(140, 120, 160),
-
-	DropdownFrame = Color3.fromRGB(170, 160, 200),
-	DropdownHolder = Color3.fromRGB(60, 45, 80),
-	DropdownBorder = Color3.fromRGB(50, 40, 65),
-	DropdownOption = Color3.fromRGB(140, 120, 160),
-
-	Keybind = Color3.fromRGB(140, 120, 160),
-
-	Input = Color3.fromRGB(140, 120, 160),
-	InputFocused = Color3.fromRGB(20, 10, 30),
-	InputIndicator = Color3.fromRGB(170, 150, 190),
-
-	Dialog = Color3.fromRGB(60, 45, 80),
-	DialogHolder = Color3.fromRGB(45, 30, 65),
-	DialogHolderLine = Color3.fromRGB(40, 25, 60),
-	DialogButton = Color3.fromRGB(60, 45, 80),
-	DialogButtonBorder = Color3.fromRGB(95, 80, 110),
-	DialogBorder = Color3.fromRGB(85, 70, 100),
-	DialogInput = Color3.fromRGB(70, 55, 85),
-	DialogInputLine = Color3.fromRGB(175, 160, 190),
-
-	Text = Color3.fromRGB(240, 240, 240),
-	SubText = Color3.fromRGB(170, 170, 170),
-	Hover = Color3.fromRGB(140, 120, 160),
-	HoverChange = 0.04,
-}
-
-end
-
-ModuleFunctions[node_28] = function()
-    local script = node_28
-    local require = customRequire
-return {
-	Name = "Aqua",
-	Accent = Color3.fromRGB(60, 165, 165),
-
-	AcrylicMain = Color3.fromRGB(20, 20, 20),
-	AcrylicBorder = Color3.fromRGB(50, 100, 100),
-	AcrylicGradient = ColorSequence.new(Color3.fromRGB(60, 140, 140), Color3.fromRGB(40, 80, 80)),
-	AcrylicNoise = 0.92,
-
-	TitleBarLine = Color3.fromRGB(60, 120, 120),
-	Tab = Color3.fromRGB(140, 180, 180),
-
-	Element = Color3.fromRGB(110, 160, 160),
-	ElementBorder = Color3.fromRGB(40, 70, 70),
-	InElementBorder = Color3.fromRGB(80, 110, 110),
-	ElementTransparency = 0.84,
-
-	ToggleSlider = Color3.fromRGB(110, 160, 160),
-	ToggleToggled = Color3.fromRGB(0, 0, 0),
-
-	SliderRail = Color3.fromRGB(110, 160, 160),
-
-	DropdownFrame = Color3.fromRGB(160, 200, 200),
-	DropdownHolder = Color3.fromRGB(40, 80, 80),
-	DropdownBorder = Color3.fromRGB(40, 65, 65),
-	DropdownOption = Color3.fromRGB(110, 160, 160),
-
-	Keybind = Color3.fromRGB(110, 160, 160),
-
-	Input = Color3.fromRGB(110, 160, 160),
-	InputFocused = Color3.fromRGB(20, 10, 30),
-	InputIndicator = Color3.fromRGB(130, 170, 170),
-
-	Dialog = Color3.fromRGB(40, 80, 80),
-	DialogHolder = Color3.fromRGB(30, 60, 60),
-	DialogHolderLine = Color3.fromRGB(25, 50, 50),
-	DialogButton = Color3.fromRGB(40, 80, 80),
-	DialogButtonBorder = Color3.fromRGB(80, 110, 110),
-	DialogBorder = Color3.fromRGB(50, 100, 100),
-	DialogInput = Color3.fromRGB(45, 90, 90),
-	DialogInputLine = Color3.fromRGB(130, 170, 170),
-
-	Text = Color3.fromRGB(240, 240, 240),
-	SubText = Color3.fromRGB(170, 170, 170),
-	Hover = Color3.fromRGB(110, 160, 160),
-	HoverChange = 0.04,
-}
-
-end
-
-ModuleFunctions[node_29] = function()
-    local script = node_29
-    local require = customRequire
-return {
-	Name = "Dark",
-	Accent = Color3.fromRGB(96, 205, 255),
-
-	AcrylicMain = Color3.fromRGB(60, 60, 60),
-	AcrylicBorder = Color3.fromRGB(90, 90, 90),
-	AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
-	AcrylicNoise = 0.9,
-
-	TitleBarLine = Color3.fromRGB(75, 75, 75),
-	Tab = Color3.fromRGB(120, 120, 120),
-
-	Element = Color3.fromRGB(120, 120, 120),
-	ElementBorder = Color3.fromRGB(35, 35, 35),
-	InElementBorder = Color3.fromRGB(90, 90, 90),
-	ElementTransparency = 0.87,
-
-	ToggleSlider = Color3.fromRGB(120, 120, 120),
-	ToggleToggled = Color3.fromRGB(0, 0, 0),
-
-	SliderRail = Color3.fromRGB(120, 120, 120),
-
-	DropdownFrame = Color3.fromRGB(160, 160, 160),
-	DropdownHolder = Color3.fromRGB(45, 45, 45),
-	DropdownBorder = Color3.fromRGB(35, 35, 35),
-	DropdownOption = Color3.fromRGB(120, 120, 120),
-
-	Keybind = Color3.fromRGB(120, 120, 120),
-
-	Input = Color3.fromRGB(160, 160, 160),
-	InputFocused = Color3.fromRGB(10, 10, 10),
-	InputIndicator = Color3.fromRGB(150, 150, 150),
-
-	Dialog = Color3.fromRGB(45, 45, 45),
-	DialogHolder = Color3.fromRGB(35, 35, 35),
-	DialogHolderLine = Color3.fromRGB(30, 30, 30),
-	DialogButton = Color3.fromRGB(45, 45, 45),
-	DialogButtonBorder = Color3.fromRGB(80, 80, 80),
-	DialogBorder = Color3.fromRGB(70, 70, 70),
-	DialogInput = Color3.fromRGB(55, 55, 55),
-	DialogInputLine = Color3.fromRGB(160, 160, 160),
-
-	Text = Color3.fromRGB(240, 240, 240),
-	SubText = Color3.fromRGB(170, 170, 170),
-	Hover = Color3.fromRGB(120, 120, 120),
-	HoverChange = 0.07,
-}
-
-end
-
-ModuleFunctions[node_30] = function()
-    local script = node_30
-    local require = customRequire
-return {
-	Name = "Darker",
-	Accent = Color3.fromRGB(72, 138, 182),
-
-	AcrylicMain = Color3.fromRGB(30, 30, 30),
-	AcrylicBorder = Color3.fromRGB(60, 60, 60),
-	AcrylicGradient = ColorSequence.new(Color3.fromRGB(25, 25, 25), Color3.fromRGB(15, 15, 15)),
-	AcrylicNoise = 0.94,
-
-	TitleBarLine = Color3.fromRGB(65, 65, 65),
-	Tab = Color3.fromRGB(100, 100, 100),
-
-	Element = Color3.fromRGB(70, 70, 70),
-	ElementBorder = Color3.fromRGB(25, 25, 25),
-	InElementBorder = Color3.fromRGB(55, 55, 55),
-	ElementTransparency = 0.82,
-
-	DropdownFrame = Color3.fromRGB(120, 120, 120),
-	DropdownHolder = Color3.fromRGB(35, 35, 35),
-	DropdownBorder = Color3.fromRGB(25, 25, 25),
-
-	Dialog = Color3.fromRGB(35, 35, 35),
-	DialogHolder = Color3.fromRGB(25, 25, 25),
-	DialogHolderLine = Color3.fromRGB(20, 20, 20),
-	DialogButton = Color3.fromRGB(35, 35, 35),
-	DialogButtonBorder = Color3.fromRGB(55, 55, 55),
-	DialogBorder = Color3.fromRGB(50, 50, 50),
-	DialogInput = Color3.fromRGB(45, 45, 45),
-	DialogInputLine = Color3.fromRGB(120, 120, 120),
-}
-
-end
-
-ModuleFunctions[node_31] = function()
-    local script = node_31
-    local require = customRequire
-return {
-	Name = "Light",
-	Accent = Color3.fromRGB(0, 103, 192),
-
-	AcrylicMain = Color3.fromRGB(200, 200, 200),
-	AcrylicBorder = Color3.fromRGB(120, 120, 120),
-	AcrylicGradient = ColorSequence.new(Color3.fromRGB(255, 255, 255), Color3.fromRGB(255, 255, 255)),
-	AcrylicNoise = 0.96,
-
-	TitleBarLine = Color3.fromRGB(160, 160, 160),
-	Tab = Color3.fromRGB(90, 90, 90),
-
-	Element = Color3.fromRGB(255, 255, 255),
-	ElementBorder = Color3.fromRGB(180, 180, 180),
-	InElementBorder = Color3.fromRGB(150, 150, 150),
-	ElementTransparency = 0.65,
-
-	ToggleSlider = Color3.fromRGB(40, 40, 40),
-	ToggleToggled = Color3.fromRGB(255, 255, 255),
-
-	SliderRail = Color3.fromRGB(40, 40, 40),
-
-	DropdownFrame = Color3.fromRGB(200, 200, 200),
-	DropdownHolder = Color3.fromRGB(240, 240, 240),
-	DropdownBorder = Color3.fromRGB(200, 200, 200),
-	DropdownOption = Color3.fromRGB(150, 150, 150),
-
-	Keybind = Color3.fromRGB(120, 120, 120),
-
-	Input = Color3.fromRGB(200, 200, 200),
-	InputFocused = Color3.fromRGB(100, 100, 100),
-	InputIndicator = Color3.fromRGB(80, 80, 80),
-
-	Dialog = Color3.fromRGB(255, 255, 255),
-	DialogHolder = Color3.fromRGB(240, 240, 240),
-	DialogHolderLine = Color3.fromRGB(228, 228, 228),
-	DialogButton = Color3.fromRGB(255, 255, 255),
-	DialogButtonBorder = Color3.fromRGB(190, 190, 190),
-	DialogBorder = Color3.fromRGB(140, 140, 140),
-	DialogInput = Color3.fromRGB(250, 250, 250),
-	DialogInputLine = Color3.fromRGB(160, 160, 160),
-
-	Text = Color3.fromRGB(0, 0, 0),
-	SubText = Color3.fromRGB(40, 40, 40),
-	Hover = Color3.fromRGB(50, 50, 50),
-	HoverChange = 0.16,
-}
-
-end
-
-ModuleFunctions[node_32] = function()
-    local script = node_32
-    local require = customRequire
-return {
-	Name = "Rose",
-	Accent = Color3.fromRGB(180, 55, 90),
-
-	AcrylicMain = Color3.fromRGB(40, 40, 40),
-	AcrylicBorder = Color3.fromRGB(130, 90, 110),
-	AcrylicGradient = ColorSequence.new(Color3.fromRGB(190, 60, 135), Color3.fromRGB(165, 50, 70)),
-	AcrylicNoise = 0.92,
-
-	TitleBarLine = Color3.fromRGB(140, 85, 105),
-	Tab = Color3.fromRGB(180, 140, 160),
-
-	Element = Color3.fromRGB(200, 120, 170),
-	ElementBorder = Color3.fromRGB(110, 70, 85),
-	InElementBorder = Color3.fromRGB(120, 90, 90),
-	ElementTransparency = 0.86,
-
-	ToggleSlider = Color3.fromRGB(200, 120, 170),
-	ToggleToggled = Color3.fromRGB(0, 0, 0),
-
-	SliderRail = Color3.fromRGB(200, 120, 170),
-
-	DropdownFrame = Color3.fromRGB(200, 160, 180),
-	DropdownHolder = Color3.fromRGB(120, 50, 75),
-	DropdownBorder = Color3.fromRGB(90, 40, 55),
-	DropdownOption = Color3.fromRGB(200, 120, 170),
-
-	Keybind = Color3.fromRGB(200, 120, 170),
-
-	Input = Color3.fromRGB(200, 120, 170),
-	InputFocused = Color3.fromRGB(20, 10, 30),
-	InputIndicator = Color3.fromRGB(170, 150, 190),
-
-	Dialog = Color3.fromRGB(120, 50, 75),
-	DialogHolder = Color3.fromRGB(95, 40, 60),
-	DialogHolderLine = Color3.fromRGB(90, 35, 55),
-	DialogButton = Color3.fromRGB(120, 50, 75),
-	DialogButtonBorder = Color3.fromRGB(155, 90, 115),
-	DialogBorder = Color3.fromRGB(100, 70, 90),
-	DialogInput = Color3.fromRGB(135, 55, 80),
-	DialogInputLine = Color3.fromRGB(190, 160, 180),
-
-	Text = Color3.fromRGB(240, 240, 240),
-	SubText = Color3.fromRGB(170, 170, 170),
-	Hover = Color3.fromRGB(200, 120, 170),
-	HoverChange = 0.04,
-}
-
-end
-
-ModuleFunctions[node_33] = function()
-    local script = node_33
-    local require = customRequire
-local Themes = {
-	Names = {
-		"Dark",
-		"Darker",
-		"Light",
-		"Aqua",
-		"Amethyst",
-		"Rose",
-	},
-}
-
-for _, Theme in next, script:GetChildren() do
-	local Required = require(Theme)
-	Themes[Required.Name] = Required
-end
-
-return Themes
-
-end
-
-ModuleFunctions[node_34] = function()
-    local script = node_34
+ModuleFunctions[file_BaseMotor_37] = function()
+    local script = file_BaseMotor_37
     local require = customRequire
 local RunService = game:GetService("RunService")
 
@@ -5420,8 +5098,8 @@ return BaseMotor
 
 end
 
-ModuleFunctions[node_35] = function()
-    local script = node_35
+ModuleFunctions[file_GroupMotor_38] = function()
+    local script = file_GroupMotor_38
     local require = customRequire
 local BaseMotor = require(script.Parent.BaseMotor)
 local SingleMotor = require(script.Parent.SingleMotor)
@@ -5536,8 +5214,26 @@ return GroupMotor
 
 end
 
-ModuleFunctions[node_36] = function()
-    local script = node_36
+ModuleFunctions[mod_Flipper_6] = function()
+    local script = mod_Flipper_6
+    local require = customRequire
+local Flipper = {
+	SingleMotor = require(script.SingleMotor),
+	GroupMotor = require(script.GroupMotor),
+
+	Instant = require(script.Instant),
+	Linear = require(script.Linear),
+	Spring = require(script.Spring),
+
+	isMotor = require(script.isMotor),
+}
+
+return Flipper
+
+end
+
+ModuleFunctions[file_Instant_39] = function()
+    local script = file_Instant_39
     local require = customRequire
 local Instant = {}
 Instant.__index = Instant
@@ -5559,8 +5255,25 @@ return Instant
 
 end
 
-ModuleFunctions[node_37] = function()
-    local script = node_37
+ModuleFunctions[file_isMotor_44] = function()
+    local script = file_isMotor_44
+    local require = customRequire
+local function isMotor(value)
+	local motorType = tostring(value):match("^Motor%((.+)%)$")
+
+	if motorType then
+		return true, motorType
+	else
+		return false
+	end
+end
+
+return isMotor
+
+end
+
+ModuleFunctions[file_Linear_40] = function()
+    local script = file_Linear_40
     local require = customRequire
 local Linear = {}
 Linear.__index = Linear
@@ -5601,8 +5314,8 @@ return Linear
 
 end
 
-ModuleFunctions[node_38] = function()
-    local script = node_38
+ModuleFunctions[file_Signal_41] = function()
+    local script = file_Signal_41
     local require = customRequire
 local Connection = {}
 Connection.__index = Connection
@@ -5665,8 +5378,8 @@ return Signal
 
 end
 
-ModuleFunctions[node_39] = function()
-    local script = node_39
+ModuleFunctions[file_SingleMotor_42] = function()
+    local script = file_SingleMotor_42
     local require = customRequire
 local BaseMotor = require(script.Parent.BaseMotor)
 
@@ -5738,8 +5451,8 @@ return SingleMotor
 
 end
 
-ModuleFunctions[node_40] = function()
-    local script = node_40
+ModuleFunctions[file_Spring_43] = function()
+    local script = file_Spring_43
     local require = customRequire
 local VELOCITY_THRESHOLD = 0.001
 local POSITION_THRESHOLD = 0.001
@@ -5851,38 +5564,327 @@ return Spring
 
 end
 
-ModuleFunctions[node_41] = function()
-    local script = node_41
+ModuleFunctions[file_Amethyst_31] = function()
+    local script = file_Amethyst_31
     local require = customRequire
-local Flipper = {
-	SingleMotor = require(script.SingleMotor),
-	GroupMotor = require(script.GroupMotor),
+return {
+	Name = "Amethyst",
+	Accent = Color3.fromRGB(97, 62, 167),
 
-	Instant = require(script.Instant),
-	Linear = require(script.Linear),
-	Spring = require(script.Spring),
+	AcrylicMain = Color3.fromRGB(20, 20, 20),
+	AcrylicBorder = Color3.fromRGB(110, 90, 130),
+	AcrylicGradient = ColorSequence.new(Color3.fromRGB(85, 57, 139), Color3.fromRGB(40, 25, 65)),
+	AcrylicNoise = 0.92,
 
-	isMotor = require(script.isMotor),
+	TitleBarLine = Color3.fromRGB(95, 75, 110),
+	Tab = Color3.fromRGB(160, 140, 180),
+
+	Element = Color3.fromRGB(140, 120, 160),
+	ElementBorder = Color3.fromRGB(60, 50, 70),
+	InElementBorder = Color3.fromRGB(100, 90, 110),
+	ElementTransparency = 0.87,
+
+	ToggleSlider = Color3.fromRGB(140, 120, 160),
+	ToggleToggled = Color3.fromRGB(0, 0, 0),
+
+	SliderRail = Color3.fromRGB(140, 120, 160),
+
+	DropdownFrame = Color3.fromRGB(170, 160, 200),
+	DropdownHolder = Color3.fromRGB(60, 45, 80),
+	DropdownBorder = Color3.fromRGB(50, 40, 65),
+	DropdownOption = Color3.fromRGB(140, 120, 160),
+
+	Keybind = Color3.fromRGB(140, 120, 160),
+
+	Input = Color3.fromRGB(140, 120, 160),
+	InputFocused = Color3.fromRGB(20, 10, 30),
+	InputIndicator = Color3.fromRGB(170, 150, 190),
+
+	Dialog = Color3.fromRGB(60, 45, 80),
+	DialogHolder = Color3.fromRGB(45, 30, 65),
+	DialogHolderLine = Color3.fromRGB(40, 25, 60),
+	DialogButton = Color3.fromRGB(60, 45, 80),
+	DialogButtonBorder = Color3.fromRGB(95, 80, 110),
+	DialogBorder = Color3.fromRGB(85, 70, 100),
+	DialogInput = Color3.fromRGB(70, 55, 85),
+	DialogInputLine = Color3.fromRGB(175, 160, 190),
+
+	Text = Color3.fromRGB(240, 240, 240),
+	SubText = Color3.fromRGB(170, 170, 170),
+	Hover = Color3.fromRGB(140, 120, 160),
+	HoverChange = 0.04,
 }
 
-return Flipper
-
 end
 
-ModuleFunctions[node_42] = function()
-    local script = node_42
+ModuleFunctions[file_Aqua_32] = function()
+    local script = file_Aqua_32
     local require = customRequire
-local function isMotor(value)
-	local motorType = tostring(value):match("^Motor%((.+)%)$")
+return {
+	Name = "Aqua",
+	Accent = Color3.fromRGB(60, 165, 165),
 
-	if motorType then
-		return true, motorType
-	else
-		return false
-	end
+	AcrylicMain = Color3.fromRGB(20, 20, 20),
+	AcrylicBorder = Color3.fromRGB(50, 100, 100),
+	AcrylicGradient = ColorSequence.new(Color3.fromRGB(60, 140, 140), Color3.fromRGB(40, 80, 80)),
+	AcrylicNoise = 0.92,
+
+	TitleBarLine = Color3.fromRGB(60, 120, 120),
+	Tab = Color3.fromRGB(140, 180, 180),
+
+	Element = Color3.fromRGB(110, 160, 160),
+	ElementBorder = Color3.fromRGB(40, 70, 70),
+	InElementBorder = Color3.fromRGB(80, 110, 110),
+	ElementTransparency = 0.84,
+
+	ToggleSlider = Color3.fromRGB(110, 160, 160),
+	ToggleToggled = Color3.fromRGB(0, 0, 0),
+
+	SliderRail = Color3.fromRGB(110, 160, 160),
+
+	DropdownFrame = Color3.fromRGB(160, 200, 200),
+	DropdownHolder = Color3.fromRGB(40, 80, 80),
+	DropdownBorder = Color3.fromRGB(40, 65, 65),
+	DropdownOption = Color3.fromRGB(110, 160, 160),
+
+	Keybind = Color3.fromRGB(110, 160, 160),
+
+	Input = Color3.fromRGB(110, 160, 160),
+	InputFocused = Color3.fromRGB(20, 10, 30),
+	InputIndicator = Color3.fromRGB(130, 170, 170),
+
+	Dialog = Color3.fromRGB(40, 80, 80),
+	DialogHolder = Color3.fromRGB(30, 60, 60),
+	DialogHolderLine = Color3.fromRGB(25, 50, 50),
+	DialogButton = Color3.fromRGB(40, 80, 80),
+	DialogButtonBorder = Color3.fromRGB(80, 110, 110),
+	DialogBorder = Color3.fromRGB(50, 100, 100),
+	DialogInput = Color3.fromRGB(45, 90, 90),
+	DialogInputLine = Color3.fromRGB(130, 170, 170),
+
+	Text = Color3.fromRGB(240, 240, 240),
+	SubText = Color3.fromRGB(170, 170, 170),
+	Hover = Color3.fromRGB(110, 160, 160),
+	HoverChange = 0.04,
+}
+
 end
 
-return isMotor
+ModuleFunctions[file_Dark_33] = function()
+    local script = file_Dark_33
+    local require = customRequire
+return {
+	Name = "Dark",
+	Accent = Color3.fromRGB(96, 205, 255),
+
+	AcrylicMain = Color3.fromRGB(60, 60, 60),
+	AcrylicBorder = Color3.fromRGB(90, 90, 90),
+	AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
+	AcrylicNoise = 0.9,
+
+	TitleBarLine = Color3.fromRGB(75, 75, 75),
+	Tab = Color3.fromRGB(120, 120, 120),
+
+	Element = Color3.fromRGB(120, 120, 120),
+	ElementBorder = Color3.fromRGB(35, 35, 35),
+	InElementBorder = Color3.fromRGB(90, 90, 90),
+	ElementTransparency = 0.87,
+
+	ToggleSlider = Color3.fromRGB(120, 120, 120),
+	ToggleToggled = Color3.fromRGB(0, 0, 0),
+
+	SliderRail = Color3.fromRGB(120, 120, 120),
+
+	DropdownFrame = Color3.fromRGB(160, 160, 160),
+	DropdownHolder = Color3.fromRGB(45, 45, 45),
+	DropdownBorder = Color3.fromRGB(35, 35, 35),
+	DropdownOption = Color3.fromRGB(120, 120, 120),
+
+	Keybind = Color3.fromRGB(120, 120, 120),
+
+	Input = Color3.fromRGB(160, 160, 160),
+	InputFocused = Color3.fromRGB(10, 10, 10),
+	InputIndicator = Color3.fromRGB(150, 150, 150),
+
+	Dialog = Color3.fromRGB(45, 45, 45),
+	DialogHolder = Color3.fromRGB(35, 35, 35),
+	DialogHolderLine = Color3.fromRGB(30, 30, 30),
+	DialogButton = Color3.fromRGB(45, 45, 45),
+	DialogButtonBorder = Color3.fromRGB(80, 80, 80),
+	DialogBorder = Color3.fromRGB(70, 70, 70),
+	DialogInput = Color3.fromRGB(55, 55, 55),
+	DialogInputLine = Color3.fromRGB(160, 160, 160),
+
+	Text = Color3.fromRGB(240, 240, 240),
+	SubText = Color3.fromRGB(170, 170, 170),
+	Hover = Color3.fromRGB(120, 120, 120),
+	HoverChange = 0.07,
+}
+
+end
+
+ModuleFunctions[file_Darker_34] = function()
+    local script = file_Darker_34
+    local require = customRequire
+return {
+	Name = "Darker",
+	Accent = Color3.fromRGB(72, 138, 182),
+
+	AcrylicMain = Color3.fromRGB(30, 30, 30),
+	AcrylicBorder = Color3.fromRGB(60, 60, 60),
+	AcrylicGradient = ColorSequence.new(Color3.fromRGB(25, 25, 25), Color3.fromRGB(15, 15, 15)),
+	AcrylicNoise = 0.94,
+
+	TitleBarLine = Color3.fromRGB(65, 65, 65),
+	Tab = Color3.fromRGB(100, 100, 100),
+
+	Element = Color3.fromRGB(70, 70, 70),
+	ElementBorder = Color3.fromRGB(25, 25, 25),
+	InElementBorder = Color3.fromRGB(55, 55, 55),
+	ElementTransparency = 0.82,
+
+	DropdownFrame = Color3.fromRGB(120, 120, 120),
+	DropdownHolder = Color3.fromRGB(35, 35, 35),
+	DropdownBorder = Color3.fromRGB(25, 25, 25),
+
+	Dialog = Color3.fromRGB(35, 35, 35),
+	DialogHolder = Color3.fromRGB(25, 25, 25),
+	DialogHolderLine = Color3.fromRGB(20, 20, 20),
+	DialogButton = Color3.fromRGB(35, 35, 35),
+	DialogButtonBorder = Color3.fromRGB(55, 55, 55),
+	DialogBorder = Color3.fromRGB(50, 50, 50),
+	DialogInput = Color3.fromRGB(45, 45, 45),
+	DialogInputLine = Color3.fromRGB(120, 120, 120),
+}
+
+end
+
+ModuleFunctions[mod_Themes_5] = function()
+    local script = mod_Themes_5
+    local require = customRequire
+local Themes = {
+	Names = {
+		"Dark",
+		"Darker",
+		"Light",
+		"Aqua",
+		"Amethyst",
+		"Rose",
+	},
+}
+
+for _, Theme in next, script:GetChildren() do
+	local Required = require(Theme)
+	Themes[Required.Name] = Required
+end
+
+return Themes
+
+end
+
+ModuleFunctions[file_Light_35] = function()
+    local script = file_Light_35
+    local require = customRequire
+return {
+	Name = "Light",
+	Accent = Color3.fromRGB(0, 103, 192),
+
+	AcrylicMain = Color3.fromRGB(200, 200, 200),
+	AcrylicBorder = Color3.fromRGB(120, 120, 120),
+	AcrylicGradient = ColorSequence.new(Color3.fromRGB(255, 255, 255), Color3.fromRGB(255, 255, 255)),
+	AcrylicNoise = 0.96,
+
+	TitleBarLine = Color3.fromRGB(160, 160, 160),
+	Tab = Color3.fromRGB(90, 90, 90),
+
+	Element = Color3.fromRGB(255, 255, 255),
+	ElementBorder = Color3.fromRGB(180, 180, 180),
+	InElementBorder = Color3.fromRGB(150, 150, 150),
+	ElementTransparency = 0.65,
+
+	ToggleSlider = Color3.fromRGB(40, 40, 40),
+	ToggleToggled = Color3.fromRGB(255, 255, 255),
+
+	SliderRail = Color3.fromRGB(40, 40, 40),
+
+	DropdownFrame = Color3.fromRGB(200, 200, 200),
+	DropdownHolder = Color3.fromRGB(240, 240, 240),
+	DropdownBorder = Color3.fromRGB(200, 200, 200),
+	DropdownOption = Color3.fromRGB(150, 150, 150),
+
+	Keybind = Color3.fromRGB(120, 120, 120),
+
+	Input = Color3.fromRGB(200, 200, 200),
+	InputFocused = Color3.fromRGB(100, 100, 100),
+	InputIndicator = Color3.fromRGB(80, 80, 80),
+
+	Dialog = Color3.fromRGB(255, 255, 255),
+	DialogHolder = Color3.fromRGB(240, 240, 240),
+	DialogHolderLine = Color3.fromRGB(228, 228, 228),
+	DialogButton = Color3.fromRGB(255, 255, 255),
+	DialogButtonBorder = Color3.fromRGB(190, 190, 190),
+	DialogBorder = Color3.fromRGB(140, 140, 140),
+	DialogInput = Color3.fromRGB(250, 250, 250),
+	DialogInputLine = Color3.fromRGB(160, 160, 160),
+
+	Text = Color3.fromRGB(0, 0, 0),
+	SubText = Color3.fromRGB(40, 40, 40),
+	Hover = Color3.fromRGB(50, 50, 50),
+	HoverChange = 0.16,
+}
+
+end
+
+ModuleFunctions[file_Rose_36] = function()
+    local script = file_Rose_36
+    local require = customRequire
+return {
+	Name = "Rose",
+	Accent = Color3.fromRGB(180, 55, 90),
+
+	AcrylicMain = Color3.fromRGB(40, 40, 40),
+	AcrylicBorder = Color3.fromRGB(130, 90, 110),
+	AcrylicGradient = ColorSequence.new(Color3.fromRGB(190, 60, 135), Color3.fromRGB(165, 50, 70)),
+	AcrylicNoise = 0.92,
+
+	TitleBarLine = Color3.fromRGB(140, 85, 105),
+	Tab = Color3.fromRGB(180, 140, 160),
+
+	Element = Color3.fromRGB(200, 120, 170),
+	ElementBorder = Color3.fromRGB(110, 70, 85),
+	InElementBorder = Color3.fromRGB(120, 90, 90),
+	ElementTransparency = 0.86,
+
+	ToggleSlider = Color3.fromRGB(200, 120, 170),
+	ToggleToggled = Color3.fromRGB(0, 0, 0),
+
+	SliderRail = Color3.fromRGB(200, 120, 170),
+
+	DropdownFrame = Color3.fromRGB(200, 160, 180),
+	DropdownHolder = Color3.fromRGB(120, 50, 75),
+	DropdownBorder = Color3.fromRGB(90, 40, 55),
+	DropdownOption = Color3.fromRGB(200, 120, 170),
+
+	Keybind = Color3.fromRGB(200, 120, 170),
+
+	Input = Color3.fromRGB(200, 120, 170),
+	InputFocused = Color3.fromRGB(20, 10, 30),
+	InputIndicator = Color3.fromRGB(170, 150, 190),
+
+	Dialog = Color3.fromRGB(120, 50, 75),
+	DialogHolder = Color3.fromRGB(95, 40, 60),
+	DialogHolderLine = Color3.fromRGB(90, 35, 55),
+	DialogButton = Color3.fromRGB(120, 50, 75),
+	DialogButtonBorder = Color3.fromRGB(155, 90, 115),
+	DialogBorder = Color3.fromRGB(100, 70, 90),
+	DialogInput = Color3.fromRGB(135, 55, 80),
+	DialogInputLine = Color3.fromRGB(190, 160, 180),
+
+	Text = Color3.fromRGB(240, 240, 240),
+	SubText = Color3.fromRGB(170, 170, 170),
+	Hover = Color3.fromRGB(200, 120, 170),
+	HoverChange = 0.04,
+}
 
 end
 
