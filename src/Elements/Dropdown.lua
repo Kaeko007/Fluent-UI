@@ -425,7 +425,7 @@ function Element:New(Idx, Config)
 			local nTable = {}
 
 			for Value, Bool in next, Val do
-				if table.find(Dropdown.Values, Value) then
+				if table.find(Dropdown.Values, Value) and Bool then
 					nTable[Value] = true
 				end
 			end
